@@ -1,10 +1,10 @@
-name: CI/CD Tienda Perritos - Backend
+name: CI/CD proyecto - Backend
 
 on:
   push:
     branches: [ "main" ]
     paths:
-      - "backend/**"
+      - "back-Ventas_SpringBoot/**"
 
 jobs:
   build-push-deploy-backend:
