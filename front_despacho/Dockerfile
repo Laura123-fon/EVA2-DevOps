@@ -1,6 +1,6 @@
 FROM nginx:alpine
 
-# Eliminar contenido por defecto
+# Eliminar contenido por defectos
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copiar archivos estáticos
