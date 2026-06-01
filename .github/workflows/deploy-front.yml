@@ -27,14 +27,11 @@ jobs:
 
       - name: Build imagen frontend
         run: |
-          docker build \
-            -t ${{ secrets.ECR_REPO_URL_FRONTEND }}:latest \
-            ./front_despacho
+          docker build -t ${{ secrets.ECR_REPO_URL_FRONTEND }}:latest ./front_despacho
 
       - name: Push imagen frontend
         run: |
-          docker push \
-            ${{ secrets.ECR_REPO_URL_FRONTEND }}:latest
+          docker push ${{ secrets.ECR_REPO_URL_FRONTEND }}:latest
 
       - name: Deploy EC2 Frontend
         uses: appleboy/ssh-action@master

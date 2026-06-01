@@ -27,14 +27,11 @@ jobs:
 
       - name: Build imagen
         run: |
-          docker build \
-            -t ${{ secrets.ECR_REPO_URL_VENTAS }}:latest \
-            ./back-Ventas_SpringBoot
+          docker build -t ${{ secrets.ECR_REPO_URL_VENTAS }}:latest ./back-Ventas_SpringBoot
 
       - name: Push imagen
         run: |
-          docker push \
-            ${{ secrets.ECR_REPO_URL_VENTAS }}:latest
+          docker push ${{ secrets.ECR_REPO_URL_VENTAS }}:latest
 
       - name: Deploy EC2
         uses: appleboy/ssh-action@master
